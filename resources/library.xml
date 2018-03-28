@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<library xmlns="http://www.it-academy.by/Library-schema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.it-academy.by/Library-schema Library-schema.xsd">
+	<edition id="1">
+		<type>book</type>
+		<name>Master and Margarita</name>
+		<author>Bulgakov</author>
+		<year>1940</year>
+		<count>50</count>
+		<readAtHome />
+		<countOfReadingDays>20</countOfReadingDays>
+	</edition>
+
+	<edition id="2">
+		<type>journal</type>
+		<name>National Geographic</name>
+		<author>National Geographic Society of the USA</author>
+		<year>1888</year>
+		<count>30</count>
+		<readAtHome />
+		<countOfReadingDays>10</countOfReadingDays>
+	</edition>
+
+	<edition id="3">
+		<type>newspaper</type>
+		<name>Washington Post</name>
+		<author>Nash Holdings LLC</author>
+		<year>1877</year>
+		<count>20</count>
+		<readAtHome />
+		<countOfReadingDays>5</countOfReadingDays>
+	</edition>
+</library>

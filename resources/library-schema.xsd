@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xns:schema xmlns:xns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.it-academy.by/Library-schema" xmlns:itacby="http://www.it-academy.by/Library-schema"
+	elementFormDefault="qualified">
+	
+	<xns:element name="library">
+		<xns:complexType>
+			<xns:sequence maxOccurs="unbounded">
+				<xns:element name="edition" type="itacby:edition_type" />
+			</xns:sequence>			
+		</xns:complexType>
+	</xns:element>
+	
+	<xns:complexType name="edition_info">
+		<xns:sequence>
+			<xns:element name="type" type="xns:string" />
+			<xns:element name="name" type="xns:string" />
+			<xns:element name="author" type="xns:string" />
+			<xns:element name="year" type="xns:int" />
+			<xns:element name="count" type="xns:int" />
+		</xns:sequence>
+		<xns:attribute name="id" />
+	</xns:complexType>
+	
+	<xns:complexType name="edition_type">
+		<xns:complexContent>
+			<xns:extension base="itacby:edition_info">
+			<xns:sequence>
+				<xns:choice>
+					<xns:element name="readAtHome"/>
+					<xns:element name="readAtLibrary"/>					 
+				</xns:choice>	
+				<xns:element name="countOfReadingDays" type="xns:int" minOccurs="0" />
+				</xns:sequence>							
+				</xns:extension>		
+		</xns:complexContent>		
+	</xns:complexType>
+</xns:schema>
